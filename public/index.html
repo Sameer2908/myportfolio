@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sameer Chaubey | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-    </style>
-  </head>
-  <body class="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen">
-    <!-- Hero Section -->
-    <section class="text-center py-20 px-6">
-      <h1 class="text-5xl font-extrabold mb-4">Sameer Chaubey</h1>
-      <p class="text-xl text-gray-300">Economics & AI Enthusiast| Data Science</p>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sameer Chaubey | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .nav-link {
+      @apply relative font-medium text-gray-700 transition duration-300;
+    }
+    .nav-link::after {
+      content: "";
+      @apply absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300;
+    }
+    .nav-link:hover::after {
+      @apply w-full;
+    }
+    .nav-link:hover {
+      color: #4f46e5;
+    }
+  </style>
+</head>
+<body class="bg-[#fefefe] text-gray-900 min-h-screen">
 
-    <!-- About Section -->
-    <section class="max-w-4xl mx-auto px-6 py-12">
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-600 pb-2">About Me</h2>
-      <p class="text-gray-300 leading-relaxed">
-        I'm a Quantitative Economics graduate, working on advanced applications of control systems in macroeconomics and finance.
-        I'm also exploring AI, predictive modeling, and statistical learning.
+  <!-- Navigation -->
+  <header class="flex justify-between items-center px-8 py-6 shadow bg-white sticky top-0 z-50">
+    <h1 class="text-xl font-bold text-indigo-700">Sameer Chaubey</h1>
+    <nav class="space-x-6 flex items-center">
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Two Parallel Cards -->
+  <section class="flex flex-col md:flex-row items-stretch justify-center gap-8 py-24 px-6 max-w-6xl mx-auto">
+
+    <!-- Card 1: Profile -->
+    <div class="bg-white shadow-lg rounded-2xl p-8 w-full md:w-2/5 flex flex-col justify-center items-center text-center hover:shadow-xl transition-shadow duration-300">
+      <img src="assets/Chaubey_Sameer.jpg" alt="Sameer Chaubey" class="w-40 h-40 rounded-full shadow mb-6 border-4 border-indigo-100 object-cover" />
+      <h2 class="text-3xl font-extrabold text-gray-800 mb-2">Sameer Chaubey</h2>
+      <p class="text-gray-600 text-lg">MSQE | ISI Kolkata | Ex-Deloitte</p>
+    </div>
+
+    <!-- Card 2: Welcome -->
+    <div class="bg-white shadow-lg rounded-2xl p-8 w-full md:w-3/5 flex flex-col justify-center hover:shadow-xl transition-shadow duration-300">
+      <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Hey there, welcome to my portfolio!</h3>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        I'm Sameer — I work at the crossroads of economics, finance, and data science. I enjoy exploring complex ideas and extracting insights that bring clarity to real-world problems.
+        <br /><br />
+        Feel free to take a look around — you’ll find projects, ideas, and interests that reflect my journey so far. And if something catches your attention, or you'd just like to say hello, reach out at  
+        <a href="mailto:sameer.isik@gmail.com" class="text-indigo-600 hover:underline font-medium">sameer.isik@gmail.com</a>.
       </p>
-    </section>
+    </div>
 
-    <!-- Projects Section -->
-    <section class="max-w-4xl mx-auto px-6 py-12">
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-600 pb-2">Projects</h2>
-      <ul class="space-y-4">
-        <li class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition">
-          <strong>GDP Nowcasting with LSTM</strong><br />
-          Predicting YoY GDP using IIP, trade, and vehicle indicators with LSTM models.
-        </li>
-        <li class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition">
-          <strong>Kalman Filter in Stock Forecasting</strong><br />
-          Combined sentiment and historical data using UKF and integrated it with ARIMA models.
-        </li>
-        <li class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition">
-          <strong>Political Economy Simulations</strong><br />
-          Simulated progressive taxation under majority voting using MATLAB and Simulink.
-        </li>
-      </ul>
-    </section>
+  </section>
 
-    <!-- Skills Section -->
-    <section class="max-w-4xl mx-auto px-6 py-12">
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-600 pb-2">Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-300">
-        <span class="bg-gray-800 p-3 rounded-lg text-center">Python</span>
-        <span class="bg-gray-800 p-3 rounded-lg text-center">MATLAB</span>
-        <span class="bg-gray-800 p-3 rounded-lg text-center">TensorFlow/Keras</span>
-        <span class="bg-gray-800 p-3 rounded-lg text-center">Time Series Analysis</span>
-        <span class="bg-gray-800 p-3 rounded-lg text-center">Control Theory</span>
-        <span class="bg-gray-800 p-3 rounded-lg text-center">Stata / R / EViews</span>
-      </div>
-    </section>
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 Sameer Chaubey. All rights reserved.
+  </footer>
 
-    <!-- Contact Section -->
-    <section class="max-w-4xl mx-auto px-6 py-12 text-center">
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-600 pb-2">Contact</h2>
-      <p class="text-gray-300 mb-2">Email: <a href="mailto:sameer.chaubey@email.com" class="text-blue-400 hover:underline">sameer.chaubey@email.com</a></p>
-      <p class="text-gray-300">LinkedIn: <a href="https://linkedin.com/in/sameerchaubey" target="_blank" class="text-blue-400 hover:underline">linkedin.com/in/sameerchaubey</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center text-sm text-gray-600 py-6">
-      &copy; 2025 Sameer Chaubey. All rights reserved.
-    </footer>
-  </body>
+</body>
 </html>
